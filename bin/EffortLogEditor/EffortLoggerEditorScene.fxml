@@ -94,7 +94,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="449.0" layoutY="509.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="251.0" text="Proceed to the Effort Log Console" />
+      <Button fx:id="btnReturnToLogConsole" layoutX="449.0" layoutY="509.0" mnemonicParsing="false" onAction="#returnToLogConsole" prefHeight="26.0" prefWidth="251.0" text="Proceed to the Effort Log Console" />
       <Label layoutX="50.0" layoutY="390.0" prefHeight="26.0" prefWidth="195.0" text="These attributes have been saved.">
          <font>
             <Font name="System Bold" size="12.0" />
