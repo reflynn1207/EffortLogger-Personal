@@ -64,7 +64,7 @@
          </font>
       </Label>
       <Button fx:id="btnLogEditor" layoutX="25.0" layoutY="480.0" mnemonicParsing="false" onAction="#openLogEditor" prefHeight="40.0" prefWidth="164.0" text="Effort Log Editor" />
-      <Button layoutX="211.0" layoutY="480.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="164.0" text="Defect Log Console" />
+      <Button fx:id="btnDefectLogConsole" layoutX="211.0" layoutY="480.0" mnemonicParsing="false" onAction="#openDefectLogConsole" prefHeight="40.0" prefWidth="164.0" text="Defect Log Console" />
       <Button layoutX="398.0" layoutY="480.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="164.0" text="Definitions" />
       <Button layoutX="582.0" layoutY="480.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="164.0" text="Effort and Defect Logs" />
    </children>

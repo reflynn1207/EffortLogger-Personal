@@ -18,6 +18,9 @@ public class EffortLogConsoleController {
     private Button btnLogEditor;
 
     @FXML
+    private Button btnDefectLogConsole;
+
+    @FXML
     private Button btnStartActivity;
 
     @FXML
@@ -33,6 +36,17 @@ public class EffortLogConsoleController {
         Scene scene = new Scene(root);
 
         stage.setTitle("Effort Log Editor");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void openDefectLogConsole(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/DefectConsole/DefectConsole.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setTitle("Defect Log Console");
         stage.setScene(scene);
         stage.show();
     }
