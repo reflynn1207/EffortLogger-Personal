@@ -7,19 +7,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoggerEditorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EffortLogEditor.LoggerEditorController">
    <children>
       <Label alignment="CENTER" layoutX="50.0" prefHeight="27.0" prefWidth="666.0" text="Effort Log Editor" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="28.0" />
          </font></Label>
-      <Button layoutX="520.0" layoutY="80.0" mnemonicParsing="false" onAction="#btnClearEffortLog" prefHeight="26.0" prefWidth="195.0" text="Clear This Effort Log" />
+      <Button fx:id="clearEffortLog" layoutX="520.0" layoutY="80.0" mnemonicParsing="false" onAction="#btnClearEffortLog" prefHeight="26.0" prefWidth="195.0" text="Clear This Effort Log" />
       <Label layoutX="38.0" layoutY="54.0" prefHeight="26.0" prefWidth="288.0" text="1. Select The Project in order to edit its Effort Log.">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="37.0" layoutY="80.0" prefHeight="26.0" prefWidth="288.0" />
+      <ChoiceBox fx:id="projectList" layoutX="37.0" layoutY="80.0" prefHeight="26.0" prefWidth="288.0" />
       <Label layoutX="520.0" layoutY="54.0" prefHeight="26.0" prefWidth="195.0" text="2.a. Clear this Project's Effort Log">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -31,7 +31,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="38.0" layoutY="142.0" prefHeight="26.0" prefWidth="677.0" />
+      <ChoiceBox fx:id="logEntry" layoutX="38.0" layoutY="142.0" prefHeight="26.0" prefWidth="677.0" />
       <Label layoutX="38.0" layoutY="168.0" prefHeight="18.0" prefWidth="452.0" text="nn. yy-mm-dd (hh:mm:ss-hh:mm:ss) &lt;Life Cycle Step&gt;; &lt;Effort Category&gt;; &lt;Details&gt;" />
       <Label layoutX="36.0" layoutY="186.0" prefHeight="26.0" prefWidth="550.0" text="3.a Modify the Current Effort Log Entry's attributes and press &quot;Update This Entry&quot; when finished.">
          <font>
@@ -64,42 +64,42 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="55.0" layoutY="283.0" prefHeight="26.0" prefWidth="251.0" />
+      <ChoiceBox fx:id="lifeCycleDropDown" layoutX="55.0" layoutY="283.0" prefHeight="26.0" prefWidth="251.0" />
       <Label layoutX="60.0" layoutY="309.0" prefHeight="26.0" prefWidth="90.0" text="Effort Category:">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="55.0" layoutY="335.0" prefHeight="26.0" prefWidth="188.0" />
+      <ChoiceBox fx:id="effortCategoryDropDown" layoutX="55.0" layoutY="335.0" prefHeight="26.0" prefWidth="188.0" />
       <Label layoutX="261.0" layoutY="309.0" prefHeight="26.0" prefWidth="31.0" text="Plan:">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="255.0" layoutY="335.0" prefHeight="26.0" prefWidth="459.0" />
+      <ChoiceBox fx:id="planDropDown" layoutX="255.0" layoutY="335.0" prefHeight="26.0" prefWidth="459.0" />
       <Label layoutX="23.0" layoutY="433.0" prefHeight="26.0" prefWidth="227.0" text="3.b. Delete the Current Effort Log Entry">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="22.0" layoutY="459.0" mnemonicParsing="false" onAction="#btnClearEffortLog" prefHeight="26.0" prefWidth="195.0" text="Delete This Entry" />
+      <Button layoutX="22.0" layoutY="459.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="195.0" text="Delete This Entry" />
       <Label layoutX="23.0" layoutY="486.0" prefHeight="26.0" prefWidth="302.0" text="3.c. Split the Current Effort Log Entry into two entries">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="22.0" layoutY="509.0" mnemonicParsing="false" onAction="#btnClearEffortLog" prefHeight="26.0" prefWidth="251.0" text="Split This Entry into Two Entries" />
+      <Button layoutX="22.0" layoutY="509.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="251.0" text="Split This Entry into Two Entries" />
       <Label layoutX="449.0" layoutY="486.0" prefHeight="26.0" prefWidth="206.0" text="4. Proceed to the Effort Log Console">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="449.0" layoutY="509.0" mnemonicParsing="false" onAction="#btnClearEffortLog" prefHeight="26.0" prefWidth="251.0" text="Proceed to the Effort Log Console" />
+      <Button layoutX="449.0" layoutY="509.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="251.0" text="Proceed to the Effort Log Console" />
       <Label layoutX="50.0" layoutY="390.0" prefHeight="26.0" prefWidth="195.0" text="These attributes have been saved.">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="433.0" layoutY="396.0" mnemonicParsing="false" onAction="#btnClearEffortLog" prefHeight="40.0" prefWidth="195.0" text="Update This Entry" />
+      <Button layoutX="433.0" layoutY="396.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="195.0" text="Update This Entry" />
    </children>
 </AnchorPane>
