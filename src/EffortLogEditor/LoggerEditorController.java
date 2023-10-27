@@ -1,5 +1,6 @@
 package EffortLogEditor;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -8,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -33,6 +35,9 @@ public class LoggerEditorController implements Initializable{
 
     @FXML
     private ChoiceBox<String> planDropDown;
+    
+    @FXML
+    private Button btnReturnToLogConsole;
 
     @FXML
     void btnClearEffortLog(ActionEvent event) {
@@ -47,6 +52,17 @@ public class LoggerEditorController implements Initializable{
         } catch(Exception e) {
             System.out.println("Can't load new window");
         }
+    }
+
+    @FXML
+    void returnToLogConsole(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/EffortLogConsole/EffortLogConsole.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setTitle("Effort Log Console");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @Override
