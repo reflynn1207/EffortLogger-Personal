@@ -30,6 +30,9 @@ public class EffortLogConsoleController {
     private Label clockText;
 
     @FXML
+    private Label labelMode;
+
+    @FXML
     void openLogEditor(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/EffortLogEditor/EffortLoggerEditorScene.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -61,6 +64,24 @@ public class EffortLogConsoleController {
     void stopActivity(ActionEvent event) {
         clockText.setStyle("-fx-background-color: red");
         clockText.setText("Clock is Stopped");
+    }
+
+    @FXML
+
+    public void setUserInput(String username) {
+        // Use the username to customize the message
+        if(username.equals("developer"))
+        {
+            labelMode.setText("You are part of the developer community");
+        }
+        else if(username.equals("supervisor"))
+        {
+            labelMode.setText("You are part of the supervisor community");
+        }
+        else if(username.equals("engineer"))
+        {
+            labelMode.setText("You are part of the engineer community");
+        }
     }
 
 }

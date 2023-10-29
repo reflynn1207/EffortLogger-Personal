@@ -1,5 +1,3 @@
-import java.io.IOException;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,16 +14,12 @@ public class Main extends Application {
     
     @Override
     public void start(Stage effortLogStage) throws Exception {
-
-        try {
             Parent root = FXMLLoader.load(getClass().getResource("/Login/Login.fxml"));
             Scene scene = new Scene(root);
 
             effortLogStage.setTitle("Login");
             effortLogStage.setScene(scene);
             effortLogStage.show();
-        } catch (IOException e) {
-        }
         
     }    
 }

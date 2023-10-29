@@ -1,6 +1,8 @@
 package Login;
 
 import java.io.IOException;
+
+import EffortLogConsole.EffortLogConsoleController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,13 +31,17 @@ public class LoginPageController {
 
     @FXML
     void userLogin(ActionEvent event) throws IOException{
+        String username = userName.getText();
         if (userName.getText().equals("developer") && password.getText().equals("dev1") 
         || userName.getText().equals("supervisor") && password.getText().equals("sup2") 
         || userName.getText().equals("engineer") && password.getText().equals("engi3")) {
-            Parent root = FXMLLoader.load(getClass().getResource("/EffortLogConsole/EffortLogConsole.fxml"));
-            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/EffortLogConsole/EffortLogConsole.fxml"));
+            Parent root = loader.load();
+            EffortLogConsoleController effortLogController = loader.getController();
+            effortLogController.setUserInput(username);
 
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
             stage.setTitle("Effort Log Console");
             stage.setScene(scene);
             stage.show();
