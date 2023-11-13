@@ -1,7 +1,6 @@
 package EffortLogConsole;
 
 import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,8 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+// Controller class for the Effort Log Console
 public class EffortLogConsoleController {
 
+    // FXML variables for the Effort Log Console
     @FXML
     private Button btnLogEditor;
 
@@ -33,9 +34,13 @@ public class EffortLogConsoleController {
     private Label labelMode;
 
     @FXML
+    private Button btnPlanPoker;
+
+    // Method to handle the open log editor button
+    @FXML
     void openLogEditor(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/EffortLogEditor/EffortLoggerEditorScene.fxml"));
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
 
         stage.setTitle("Effort Log Editor");
@@ -43,10 +48,11 @@ public class EffortLogConsoleController {
         stage.show();
     }
 
+    // Method to handle the open defect log console button
     @FXML
     void openDefectLogConsole(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/DefectConsole/DefectConsole.fxml"));
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
 
         stage.setTitle("Defect Log Console");
@@ -55,31 +61,40 @@ public class EffortLogConsoleController {
     }
 
     @FXML
+    void openPlanPoker(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/PlanningPoker/UserStory/UserStory1.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setTitle("User Story");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    // Method to handle the start activity button
+    @FXML
     void startActivity(ActionEvent event) {
         clockText.setStyle("-fx-background-color: green");
         clockText.setText("Clock is Running");
     }
 
+    // Method to handle the stop activity button
     @FXML
     void stopActivity(ActionEvent event) {
         clockText.setStyle("-fx-background-color: red");
         clockText.setText("Clock is Stopped");
     }
 
+    // Method to set the user input
     @FXML
 
     public void setUserInput(String username) {
         // Use the username to customize the message
-        if(username.equals("developer"))
-        {
+        if (username.equals("developer")) {
             labelMode.setText("You are part of the developer community");
-        }
-        else if(username.equals("supervisor"))
-        {
+        } else if (username.equals("supervisor")) {
             labelMode.setText("You are part of the supervisor community");
-        }
-        else if(username.equals("engineer"))
-        {
+        } else if (username.equals("engineer")) {
             labelMode.setText("You are part of the engineer community");
         }
     }

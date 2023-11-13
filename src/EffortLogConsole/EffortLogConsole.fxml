@@ -68,5 +68,6 @@
       <Button layoutX="398.0" layoutY="480.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="164.0" text="Definitions" />
       <Button layoutX="582.0" layoutY="480.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="164.0" text="Effort and Defect Logs" />
       <Label fx:id="labelMode" layoutX="455.0" layoutY="120.0" text="Label" />
+      <Button fx:id="btnPlanPoker" layoutX="540.0" layoutY="371.0" mnemonicParsing="false" onAction="#openPlanPoker" prefHeight="40.0" prefWidth="164.0" text="Proceed to Planning Poker" />
    </children>
 </AnchorPane>
