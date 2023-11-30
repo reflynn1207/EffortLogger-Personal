@@ -16,12 +16,25 @@ public class CardsController {
     private Button btnNext;
 
     @FXML
+    private Button rtnButton;
+
+    @FXML
     void openInitialEstimation(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/PlanningPoker/InitialEstimation/InitialEstimation3.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
 
         stage.setTitle("Initial Estimation");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void returnHome(ActionEvent event) throws IOException{
+         Parent root = FXMLLoader.load(getClass().getResource("/EffortLogConsole/EffortLogConsole.fxml"));
+         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+         Scene scene = new Scene(root);
+        stage.setTitle("Effort Log Console");
         stage.setScene(scene);
         stage.show();
     }

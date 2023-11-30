@@ -13,9 +13,9 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <Label layoutX="33.0" layoutY="56.0" text="Enter User Story" />
-      <TextField layoutX="33.0" layoutY="86.0" prefHeight="242.0" prefWidth="524.0" promptText="Enter " />
-      <Button fx:id="btnNext" layoutX="502.0" layoutY="347.0" mnemonicParsing="false" onAction="#openCards" text="Next" />
+      <Label layoutX="33.0" layoutY="56.0" prefHeight="17.0" prefWidth="112.0" text="Enter User Story :" />
+      <TextField layoutX="33.0" layoutY="86.0" prefHeight="242.0" prefWidth="534.0" promptText="Enter " />
+      <Button fx:id="btnNext" layoutX="510.0" layoutY="347.0" mnemonicParsing="false" onAction="#openCards" prefHeight="25.0" prefWidth="57.0" text="Next" />
       <Button fx:id="btnEffortConsole" layoutX="36.0" layoutY="347.0" mnemonicParsing="false" onAction="#openEffortConsole" text="Return to Effort Log Console" />
    </children>
 </AnchorPane>

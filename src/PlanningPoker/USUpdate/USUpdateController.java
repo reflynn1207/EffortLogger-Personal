@@ -1,5 +1,5 @@
 package PlanningPoker.USUpdate;
-
+import javafx.scene.control.Label;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,6 +16,12 @@ public class USUpdateController {
     private Button btnNext;
 
     @FXML
+    private Button svButton;
+
+    @FXML
+    private Label nsLabel;  
+
+    @FXML
     void openSaveResults(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/PlanningPoker/SaveResults/Screen7Exit.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -24,6 +30,12 @@ public class USUpdateController {
         stage.setTitle("Save Results");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    void SaveResults(ActionEvent event) throws IOException{
+        nsLabel.setText("SAVED !");
+        nsLabel.setStyle("-fx-text-fill: green;");
     }
 
 }

@@ -9,22 +9,23 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PlanningPoker.InitialEstimation.InitialEstimationController">
    <children>
-      <Label layoutX="224.0" layoutY="23.0" text="Poker Planning" textAlignment="CENTER">
+      <Label layoutX="219.0" layoutY="14.0" prefHeight="52.0" prefWidth="204.0" text="Poker Planning " textAlignment="CENTER">
          <font>
             <Font size="27.0" />
          </font>
       </Label>
-      <Label layoutX="38.0" layoutY="74.0" text="Time Required" />
-      <TextField layoutX="149.0" layoutY="70.0" promptText="Input time" />
-      <Label layoutX="38.0" layoutY="108.0" text="Effort Required" />
-      <TextField layoutX="149.0" layoutY="104.0" promptText="Input Effort" />
-      <Label layoutX="38.0" layoutY="164.0" text="Task Complexity" />
-      <ChoiceBox layoutX="173.0" layoutY="160.0" prefWidth="150.0" />
-      <Label layoutX="38.0" layoutY="213.0" text="Dependencies" />
-      <ChoiceBox layoutX="173.0" layoutY="209.0" prefWidth="150.0" />
-      <Label layoutX="38.0" layoutY="264.0" text="Team Member Skills" />
-      <ChoiceBox layoutX="173.0" layoutY="260.0" prefWidth="150.0" />
-      <Button layoutX="273.0" layoutY="341.0" mnemonicParsing="false" text="Save" />
-      <Button fx:id="btnNext" layoutX="426.0" layoutY="342.0" mnemonicParsing="false" onAction="#openHLEstimation" text="Next" />
+      <Label layoutX="31.0" layoutY="129.0" text="Time Required : " />
+      <TextField layoutX="146.0" layoutY="125.0" prefHeight="25.0" prefWidth="95.0" promptText="Input time" />
+      <Label layoutX="267.0" layoutY="129.0" prefHeight="17.0" prefWidth="95.0" text="Effort Required : " />
+      <TextField layoutX="386.0" layoutY="125.0" prefHeight="25.0" prefWidth="95.0" promptText="Input Effort" />
+      <Label layoutX="273.0" layoutY="200.0" prefHeight="17.0" prefWidth="106.0" text="Task Complexity : " />
+      <ChoiceBox fx:id="choiceBox1" layoutX="388.0" layoutY="196.0" prefHeight="25.0" prefWidth="95.0" />
+      <Label layoutX="32.0" layoutY="200.0" text="Reliances : " />
+      <ChoiceBox fx:id="choiceBox2" layoutX="146.0" layoutY="196.0" prefHeight="25.0" prefWidth="95.0" />
+      <Label layoutX="31.0" layoutY="284.0" prefHeight="17.0" prefWidth="125.0" text="Team Member Skills : " />
+      <ChoiceBox fx:id="choiceBox3" layoutX="163.0" layoutY="280.0" prefHeight="25.0" prefWidth="125.0" />
+      <Button layoutX="394.0" layoutY="341.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Save" />
+      <Button fx:id="btnNext" layoutX="493.0" layoutY="341.0" mnemonicParsing="false" onAction="#openHLEstimation" prefHeight="25.0" prefWidth="70.0" text="Next" />
+      <Label layoutX="257.0" layoutY="65.0" prefHeight="17.0" prefWidth="86.0" text="Inital Estimation" />
    </children>
 </AnchorPane>

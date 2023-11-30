@@ -9,15 +9,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PlanningPoker.SaveResults.SaveResultsController">
    <children>
-      <Button fx:id="btnSaveAndExit" layoutX="487.0" layoutY="353.0" mnemonicParsing="false" onAction="#openUserStory" prefHeight="26.0" prefWidth="105.0" text="Save and Exit" />
-      <ListView layoutX="31.0" layoutY="166.0" prefHeight="157.0" prefWidth="340.0" />
+      <Button fx:id="btnSaveAndExit" layoutX="522.0" layoutY="353.0" mnemonicParsing="false" onAction="#openUserStory" prefHeight="26.0" prefWidth="70.0" text="Exit" />
+      <ListView layoutX="31.0" layoutY="166.0" prefHeight="157.0" prefWidth="532.0" />
       <Label layoutX="31.0" layoutY="69.0" prefHeight="17.0" prefWidth="150.0" text=" Analysis of Historical Data:" />
-      <Label layoutX="204.0" layoutY="14.0" prefHeight="26.0" prefWidth="214.0" text=" Save Results/Integration">
+      <Label layoutX="247.0" layoutY="14.0" prefHeight="30.0" prefWidth="118.0" text=" Integration" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ProgressBar layoutX="31.0" layoutY="97.0" prefHeight="33.0" prefWidth="231.0" progress="0.0" />
-      <Label layoutX="31.0" layoutY="143.0" prefHeight="17.0" prefWidth="184.0" text=" Analysis of Historical Data:" />
+      <ProgressBar layoutX="31.0" layoutY="97.0" prefHeight="33.0" prefWidth="231.0" />
+      <Label layoutX="31.0" layoutY="143.0" prefHeight="17.0" prefWidth="184.0" text="Further Data : " />
    </children>
 </AnchorPane>

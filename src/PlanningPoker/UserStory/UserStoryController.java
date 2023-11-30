@@ -24,7 +24,7 @@ public class UserStoryController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
 
-        stage.setTitle("Cards");
+        stage.setTitle("Card Selection");
         stage.setScene(scene);
         stage.show();
     }
