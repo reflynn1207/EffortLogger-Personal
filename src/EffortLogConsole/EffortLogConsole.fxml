@@ -29,7 +29,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="50.0" layoutY="209.0" prefHeight="26.0" prefWidth="289.0" />
+      <ChoiceBox fx:id="projectName" layoutX="50.0" layoutY="209.0" prefHeight="26.0" prefWidth="289.0" />
       <Label layoutX="50.0" layoutY="182.0" prefHeight="26.0" prefWidth="50.0" text="Project:">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -40,14 +40,14 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="407.0" layoutY="209.0" prefHeight="26.0" prefWidth="297.0" />
+      <ChoiceBox fx:id="lifeCycle" layoutX="407.0" layoutY="209.0" prefHeight="26.0" prefWidth="297.0" />
       <Label layoutX="50.0" layoutY="242.0" prefHeight="26.0" prefWidth="96.0" text="Effort Category:">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="50.0" layoutY="268.0" prefHeight="26.0" prefWidth="217.0" />
-      <ChoiceBox layoutX="310.0" layoutY="268.0" prefHeight="26.0" prefWidth="394.0" />
+      <ChoiceBox fx:id="category" layoutX="50.0" layoutY="268.0" prefHeight="26.0" prefWidth="217.0" />
+      <ChoiceBox fx:id="plan" layoutX="310.0" layoutY="268.0" prefHeight="26.0" prefWidth="394.0" />
       <Label layoutX="310.0" layoutY="242.0" prefHeight="26.0" prefWidth="34.0" text="Plan:">
          <font>
             <Font name="System Bold" size="12.0" />

@@ -1,18 +1,24 @@
 package EffortLogConsole;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
+
+import Definitions.definitions;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import java.net.URL;
 
 // Controller class for the Effort Log Console
-public class EffortLogConsoleController {
+public class EffortLogConsoleController implements Initializable {
 
     // FXML variables for the Effort Log Console
     @FXML
@@ -35,6 +41,18 @@ public class EffortLogConsoleController {
 
     @FXML
     private Button btnPlanPoker;
+
+    @FXML
+    private ChoiceBox<String> projectName;
+
+    @FXML
+    private ChoiceBox<String> lifeCycle;
+
+    @FXML
+    private ChoiceBox<String> category;
+
+    @FXML
+    private ChoiceBox<String> plan;
 
     // Method to handle the open log editor button
     @FXML
@@ -97,6 +115,14 @@ public class EffortLogConsoleController {
         } else if (username.equals("engineer")) {
             labelMode.setText("You are part of the engineer community");
         }
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        projectName.getItems().addAll(definitions.projectNames);
+        lifeCycle.getItems().addAll(definitions.lifeCycle);
+        category.getItems().addAll(definitions.effortCategory);
+        plan.getItems().addAll(definitions.plans);
     }
 
 }
